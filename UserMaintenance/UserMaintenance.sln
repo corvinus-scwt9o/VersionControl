@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserMaintenance", "UserMain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week 04", "Week 04\Week 04.csproj", "{DB97267F-1524-4D7F-83F5-6E9BE4B86E48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Value at Risk", "Value at Risk\Value at Risk.csproj", "{CFAEA57E-AD58-48A7-804B-E3F6A95CEADB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DB97267F-1524-4D7F-83F5-6E9BE4B86E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB97267F-1524-4D7F-83F5-6E9BE4B86E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB97267F-1524-4D7F-83F5-6E9BE4B86E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFAEA57E-AD58-48A7-804B-E3F6A95CEADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFAEA57E-AD58-48A7-804B-E3F6A95CEADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFAEA57E-AD58-48A7-804B-E3F6A95CEADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFAEA57E-AD58-48A7-804B-E3F6A95CEADB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

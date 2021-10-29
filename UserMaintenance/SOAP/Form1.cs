@@ -17,14 +17,30 @@ namespace SOAP
     public partial class Form1 : Form
     {
         BindingList<Entities.RateData> Rates = new BindingList<Entities.RateData>();
+        BindingList<string> currencies = new BindingList<string>();
         public Form1()
         {
             InitializeComponent();
+            cbxValuta.DataSource = currencies;
+            var mnbService = new MNBArfolyamServiceSoapClient();
+
+            var request = new GetCurrenciesRequestBody();
+            var response = mnbService.GetCurrencies(request);
+            var result = response.GetCurrenciesResult;
+            XmlDocument vxml = new XmlDocument();
+            vxml.LoadXml(result);
+            foreach (XmlElement item in vxml.DocumentElement.FirstChild.ChildNodes)
+            {
+                currencies.Add(item.InnerText);
+            }
+
             RefreshData();
         }
 
         private void RefreshData()
         {
+            if (cbxValuta.SelectedItem == null) return;
+
             Rates.Clear();
             GetExchangeRates();
             dataGridView1.DataSource = Rates;
@@ -90,6 +106,8 @@ namespace SOAP
 
                 // Valuta
                 var childElement = (XmlElement)element.ChildNodes[0];
+                if (childElement == null)
+                    continue;
                 rate.Currency = childElement.GetAttribute("curr");
 
                 // Érték

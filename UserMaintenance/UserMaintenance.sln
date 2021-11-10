@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Value at Risk", "Value at R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOAP", "SOAP\SOAP.csproj", "{756DB793-7E44-48AF-94CC-4914B95A5F74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8heti", "8heti\8heti.csproj", "{377C014E-3C9A-4C0C-8AE2-90D8693F88D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{756DB793-7E44-48AF-94CC-4914B95A5F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{756DB793-7E44-48AF-94CC-4914B95A5F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{756DB793-7E44-48AF-94CC-4914B95A5F74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{377C014E-3C9A-4C0C-8AE2-90D8693F88D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{377C014E-3C9A-4C0C-8AE2-90D8693F88D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{377C014E-3C9A-4C0C-8AE2-90D8693F88D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{377C014E-3C9A-4C0C-8AE2-90D8693F88D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

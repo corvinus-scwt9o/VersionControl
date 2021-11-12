@@ -27,7 +27,7 @@ namespace _8heti
                 _factory = value;
                 DisplayNext();
             }
-                
+
         }
 
         private void DisplayNext()
@@ -94,6 +94,17 @@ namespace _8heti
             if (colorPicker.ShowDialog() != DialogResult.OK)
                 return;
             button.BackColor = colorPicker.Color;
+        }
+
+        private void buttonPresent_Click(object sender, EventArgs e)
+        {
+            Factory = new PresentFactory
+            {
+                Color1 = buttonPresentColor1.BackColor,
+                Color2 = buttonPresentColor2.BackColor
+
+            };
+
         }
     }
 }

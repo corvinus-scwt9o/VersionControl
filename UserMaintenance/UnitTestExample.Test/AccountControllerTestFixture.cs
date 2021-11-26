@@ -10,15 +10,15 @@ namespace UnitTestExample.Test
 {
     public class AccountControllerTestFixture
     {
-      
-            [Test,
-            TestCase("abcd1234", false),
-            TestCase("irf@uni-corvinus", false),
-            TestCase("irf.uni-corvinus.hu", false),
-            TestCase("irf@uni-corvinus.hu", true)
-            ]
-            public void TestValidateEmail(string email, bool expectedResult)
-            {
+
+        [Test,
+        TestCase("abcd1234", false),
+        TestCase("irf@uni-corvinus", false),
+        TestCase("irf.uni-corvinus.hu", false),
+        TestCase("irf@uni-corvinus.hu", true)
+        ]
+        public void TestValidateEmail(string email, bool expectedResult)
+        {
             // Arrange
             var accountController = new AccountController();
 
@@ -27,7 +27,26 @@ namespace UnitTestExample.Test
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
-            }
-        
+
+        }
+        [
+            Test,
+            TestCase("abcd1234", false), //nincs benne kisbetu
+            TestCase("ABCD1234", false), //nincs benne nagybetu
+            TestCase("abcdABCD", false), //nincs benne szam
+            TestCase("abCD12", false), //tul rovid
+            TestCase("abCD1234", true), //ez egy jol mukodo
+        ]
+        public void TestValidatePassword(string password, bool expectedResult)
+        {
+            // Arrange
+            var accountController = new AccountController();
+
+            // Act
+            var actualResult = accountController.ValidatePassword(password);
+
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
